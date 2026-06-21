@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Your clarity call with Preethima has been confirmed. Review your session details and prepare for your mindfulness, meditation and emotional balance call." />
+    <title>Preethima</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        /* =========================================================
+           Global Reset + Theme Variables
+        ========================================================= */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --ink: #06110c;
+            --ink-2: #0b1711;
+            --charcoal: #15120d;
+            --forest: #102318;
+            --forest-soft: #173323;
+            --deep: #080806;
+            --ivory: #fff8ec;
+            --ivory-soft: #f5ead8;
+            --warm-white: #fffaf2;
+            --gold: #d8aa5b;
+            --gold-light: #ffe0a0;
+            --gold-dark: #9b6a2c;
+            --sage: #8fb89b;
+            --sage-light: #b7dbc2;
+            --sage-dark: #5d7f68;
+            --rust: #a04f38;
+            --muted: #b9ab95;
+            --muted-dark: #7f6f58;
+            --glass: rgba(255, 255, 255, .075);
+            --glass-2: rgba(255, 255, 255, .035);
+            --line: rgba(255, 224, 160, .18);
+            --line-soft: rgba(255, 255, 255, .08);
+            --serif: 'Cormorant Garamond', Georgia, serif;
+            --sans: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --shadow-lg: 0 40px 100px rgba(0, 0, 0, .34);
+            --shadow-card: 0 24px 70px rgba(0, 0, 0, .28);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+            overflow-x: hidden;
+            color: var(--ivory);
+            font-family: var(--sans);
+            line-height: 1.6;
+            background:
+                radial-gradient(circle at 12% 8%, rgba(216, 170, 91, .13), transparent 28%),
+                radial-gradient(circle at 88% 14%, rgba(143, 184, 155, .14), transparent 30%),
+                linear-gradient(145deg, #050807 0%, var(--ink) 38%, #09150f 100%);
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: -3;
+            pointer-events: none;
+            opacity: .7;
+            background:
+                linear-gradient(rgba(255, 255, 255, .018) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, .018) 1px, transparent 1px);
+            background-size: 64px 64px;
+            mask-image: radial-gradient(circle at center, rgba(0, 0, 0, .62), transparent 82%);
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .orb {
+            position: fixed;
+            z-index: -2;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: .26;
+            pointer-events: none;
+            animation: drift 12s ease-in-out infinite alternate;
+        }
+
+        .orb-gold {
+            width: 430px;
+            height: 430px;
+            top: -150px;
+            left: -150px;
+            background: rgba(216, 170, 91, .25);
+        }
+
+        .orb-sage {
+            width: 390px;
+            height: 390px;
+            right: -150px;
+            bottom: -160px;
+            background: rgba(143, 184, 155, .22);
+            animation-delay: -5s;
+        }
+
+        @keyframes drift {
+            from {
+                transform: translate3d(0, 0, 0) scale(1);
+            }
+
+            to {
+                transform: translate3d(28px, 18px, 0) scale(1.06);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation: none !important;
+                transition: none !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        /* =========================================================
+           Reusable Components
+        ========================================================= */
+        .page {
+            position: relative;
+            z-index: 1;
+            width: min(940px, 100%);
+            margin-inline: auto;
+            padding: 28px 20px 72px;
+        }
+
+        .glass-card {
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at top left, rgba(255, 224, 160, .08), transparent 36%),
+                linear-gradient(145deg, rgba(255, 255, 255, .085), rgba(255, 255, 255, .028));
+            border: 1px solid rgba(255, 224, 160, .16);
+            box-shadow: var(--shadow-card), inset 0 1px 0 rgba(255, 255, 255, .08);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            margin-bottom: 10px;
+            color: var(--gold-light);
+            font-size: .68rem;
+            font-weight: 600;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 26px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold));
+        }
+
+        .section-title {
+            margin-bottom: 25px;
+            color: var(--ivory);
+            font-family: var(--serif);
+            font-size: clamp(1.75rem, 4vw, 2.55rem);
+            font-weight: 600;
+            line-height: 1.08;
+            letter-spacing: -.02em;
+        }
+
+        .section-title em {
+            color: var(--gold-light);
+            font-weight: 400;
+        }
+
+        .section-card {
+            margin-top: 22px;
+            padding: clamp(26px, 5vw, 42px);
+            border-radius: 28px;
+        }
+
+        .hi {
+            color: var(--ivory);
+            font-weight: 600;
+        }
+
+        /* =========================================================
+           Brand Bar
+        ========================================================= */
+        .brand-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 20px;
+            padding: 12px 16px;
+            border-radius: 999px;
+            animation: fadeDown .65s ease both;
+        }
+
+        .brand-lockup {
+            display: inline-flex;
+            align-items: center;
+            gap: 11px;
+        }
+
+        .brand-mark {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 39px;
+            height: 39px;
+            border-radius: 50%;
+            color: var(--gold-light);
+            background: rgba(216, 170, 91, .11);
+            border: 1px solid rgba(255, 224, 160, .2);
+            font-size: 1.15rem;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, .08);
+        }
+
+        .brand-name {
+            color: var(--ivory);
+            font-family: var(--serif);
+            font-size: 1.38rem;
+            font-weight: 600;
+            letter-spacing: -.01em;
+            line-height: 1;
+        }
+
+        .brand-name span {
+            color: var(--gold-light);
+        }
+
+        .brand-program {
+            color: rgba(255, 248, 236, .5);
+            font-size: .58rem;
+            font-weight: 600;
+            letter-spacing: .14em;
+            line-height: 1.4;
+            text-transform: uppercase;
+        }
+
+        .brand-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 13px;
+            border-radius: 999px;
+            color: var(--sage-light);
+            background: rgba(143, 184, 155, .1);
+            border: 1px solid rgba(183, 219, 194, .18);
+            font-size: .66rem;
+            font-weight: 700;
+            letter-spacing: .09em;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .brand-status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--sage-light);
+            box-shadow: 0 0 16px rgba(183, 219, 194, .8);
+        }
+
+        /* =========================================================
+           Hero Confirmation Card
+        ========================================================= */
+        .hero-card {
+            padding: clamp(32px, 6vw, 60px);
+            border-radius: 34px;
+            text-align: center;
+            animation: riseUp .85s cubic-bezier(.22, .9, .36, 1) .08s both;
+        }
+
+        .hero-card::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 10%;
+            right: 10%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 224, 160, .86), transparent);
+        }
+
+        .success-ring {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 88px;
+            height: 88px;
+            margin: 0 auto 25px;
+            border-radius: 50%;
+            background:
+                linear-gradient(135deg, #fff0ba 0%, var(--gold-light) 20%, var(--gold) 58%, var(--gold-dark) 100%);
+            box-shadow:
+                0 18px 42px rgba(216, 170, 91, .28),
+                0 0 0 10px rgba(216, 170, 91, .08);
+            animation: popIn .68s cubic-bezier(.34, 1.56, .64, 1) .48s both;
+        }
+
+        .success-ring svg {
+            width: 42px;
+            height: 42px;
+        }
+
+        .success-ring::after {
+            content: "";
+            position: absolute;
+            inset: -18px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 224, 160, .2);
+        }
+
+        .greeting {
+            margin-bottom: 5px;
+            color: var(--sage-light);
+            font-family: var(--serif);
+            font-size: clamp(1.25rem, 3vw, 1.65rem);
+            font-style: italic;
+            animation: fadeUp .6s ease .62s both;
+        }
+
+        .hero-title {
+            max-width: 650px;
+            margin: 0 auto 14px;
+            color: var(--ivory);
+            font-family: var(--serif);
+            font-size: clamp(2.35rem, 6vw, 4.55rem);
+            font-weight: 700;
+            line-height: .98;
+            letter-spacing: -.04em;
+            animation: fadeUp .68s ease .68s both;
+        }
+
+        .hero-title em {
+            color: var(--gold-light);
+            font-weight: 600;
+            text-shadow: 0 0 30px rgba(216, 170, 91, .2);
+        }
+
+        .hero-copy {
+            max-width: 620px;
+            margin: 0 auto 32px;
+            color: rgba(255, 248, 236, .68);
+            font-size: clamp(.94rem, 2vw, 1.04rem);
+            font-weight: 300;
+            line-height: 1.75;
+            animation: fadeUp .68s ease .76s both;
+        }
+
+        /* =========================================================
+           Session Details
+        ========================================================= */
+        .session-card {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 14px;
+            border-radius: 22px;
+            text-align: left;
+            background: rgba(0, 0, 0, .17);
+            border: 1px solid rgba(255, 224, 160, .13);
+            animation: fadeUp .68s ease .84s both;
+        }
+
+        .session-heading {
+            grid-column: 1 / -1;
+            padding: 5px 7px 8px;
+            color: var(--gold-light);
+            font-size: .68rem;
+            font-weight: 700;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+        }
+
+        .session-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 11px;
+            min-width: 0;
+            padding: 14px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, .045);
+            border: 1px solid rgba(255, 255, 255, .065);
+        }
+
+        .session-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 37px;
+            height: 37px;
+            min-width: 37px;
+            border-radius: 12px;
+            color: var(--gold-light);
+            background: rgba(216, 170, 91, .1);
+            border: 1px solid rgba(255, 224, 160, .16);
+            font-size: 1rem;
+        }
+
+        .session-label {
+            margin-bottom: 3px;
+            color: rgba(255, 248, 236, .46);
+            font-size: .6rem;
+            font-weight: 700;
+            letter-spacing: .12em;
+            line-height: 1.3;
+            text-transform: uppercase;
+        }
+
+        .session-value {
+            overflow-wrap: anywhere;
+            color: rgba(255, 248, 236, .9);
+            font-size: .87rem;
+            font-weight: 500;
+            line-height: 1.42;
+        }
+
+        /* =========================================================
+           Expect List
+        ========================================================= */
+        .expect-list {
+            display: grid;
+            gap: 14px;
+            list-style: none;
+        }
+
+        .expect-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 13px;
+            padding: 17px;
+            border-radius: 17px;
+            background: rgba(255, 255, 255, .035);
+            border: 1px solid rgba(255, 255, 255, .065);
+            transition: transform .25s ease, border-color .25s ease, background .25s ease;
+        }
+
+        .expect-item:hover {
+            transform: translateX(5px);
+            border-color: rgba(255, 224, 160, .22);
+            background: rgba(216, 170, 91, .055);
+        }
+
+        .expect-bullet {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 31px;
+            height: 31px;
+            min-width: 31px;
+            border-radius: 50%;
+            color: #171006;
+            background: linear-gradient(135deg, var(--gold-light), var(--gold));
+            font-size: .76rem;
+            font-weight: 800;
+            box-shadow: 0 8px 18px rgba(216, 170, 91, .18);
+        }
+
+        .expect-text strong {
+            display: block;
+            margin-bottom: 3px;
+            color: var(--ivory);
+            font-size: .95rem;
+            font-weight: 600;
+        }
+
+        .expect-text span {
+            color: rgba(255, 248, 236, .58);
+            font-size: .84rem;
+            font-weight: 300;
+            line-height: 1.62;
+        }
+
+        /* =========================================================
+           Program Pillars
+        ========================================================= */
+        .program-copy {
+            max-width: 760px;
+            margin-bottom: 25px;
+            color: rgba(255, 248, 236, .62);
+            font-size: .92rem;
+            font-weight: 300;
+            line-height: 1.75;
+        }
+
+        .pillars {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 13px;
+        }
+
+        .pillar {
+            padding: 19px;
+            border-radius: 17px;
+            background:
+                linear-gradient(145deg, rgba(143, 184, 155, .09), rgba(255, 255, 255, .028));
+            border: 1px solid rgba(183, 219, 194, .13);
+            transition: transform .24s ease, border-color .24s ease;
+        }
+
+        .pillar:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255, 224, 160, .24);
+        }
+
+        .pillar-icon {
+            margin-bottom: 10px;
+            font-size: 1.45rem;
+        }
+
+        .pillar-title {
+            margin-bottom: 5px;
+            color: var(--ivory);
+            font-size: .9rem;
+            font-weight: 600;
+        }
+
+        .pillar-desc {
+            color: rgba(255, 248, 236, .52);
+            font-size: .8rem;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        /* =========================================================
+           Mentor Card
+        ========================================================= */
+        .mentor-card {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-top: 22px;
+            padding: clamp(25px, 5vw, 40px);
+            border-radius: 28px;
+            background:
+                radial-gradient(circle at 8% 0%, rgba(216, 170, 91, .14), transparent 34%),
+                linear-gradient(135deg, rgba(21, 18, 13, .96), rgba(6, 17, 12, .96));
+            border: 1px solid rgba(255, 224, 160, .17);
+            box-shadow: var(--shadow-card);
+            animation: riseUp .78s ease .18s both;
+        }
+
+        .mentor-avatar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 92px;
+            height: 92px;
+            min-width: 92px;
+            border-radius: 50%;
+            color: #171006;
+            background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--gold-dark));
+            border: 1px solid rgba(255, 224, 160, .38);
+            box-shadow:
+                0 16px 32px rgba(0, 0, 0, .26),
+                0 0 0 6px rgba(216, 170, 91, .07);
+            font-family: var(--serif);
+            font-size: 2rem;
+            font-style: italic;
+            font-weight: 700;
+        }
+
+        .mentor-eyebrow {
+            margin-bottom: 5px;
+            color: var(--sage-light);
+            font-size: .66rem;
+            font-weight: 700;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+        }
+
+        .mentor-name {
+            margin-bottom: 9px;
+            color: var(--ivory);
+            font-family: var(--serif);
+            font-size: 2rem;
+            font-weight: 600;
+            line-height: 1;
+        }
+
+        .mentor-bio {
+            max-width: 660px;
+            color: rgba(255, 248, 236, .62);
+            font-size: .86rem;
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
+        /* =========================================================
+           Preparation Steps
+        ========================================================= */
+        .prep-steps {
+            display: grid;
+            gap: 13px;
+        }
+
+        .prep-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 17px;
+            border-radius: 17px;
+            background: rgba(255, 255, 255, .035);
+            border: 1px solid rgba(255, 255, 255, .065);
+            transition: transform .24s ease, border-color .24s ease, background .24s ease;
+        }
+
+        .prep-step:hover {
+            transform: translateX(5px);
+            border-color: rgba(183, 219, 194, .2);
+            background: rgba(143, 184, 155, .055);
+        }
+
+        .step-num {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 31px;
+            height: 31px;
+            min-width: 31px;
+            border-radius: 10px;
+            color: var(--gold-light);
+            background: rgba(216, 170, 91, .1);
+            border: 1px solid rgba(255, 224, 160, .18);
+            font-family: var(--serif);
+            font-size: 1.18rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .step-content strong {
+            display: block;
+            margin-bottom: 3px;
+            color: var(--ivory);
+            font-size: .92rem;
+            font-weight: 600;
+        }
+
+        .step-content span {
+            color: rgba(255, 248, 236, .56);
+            font-size: .83rem;
+            font-weight: 300;
+            line-height: 1.62;
+        }
+
+        /* =========================================================
+           Footer
+        ========================================================= */
+        .divider {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            margin: 34px 0;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 224, 160, .22), transparent);
+        }
+
+        .divider-icon {
+            color: var(--gold-light);
+            font-size: .9rem;
+        }
+
+        .footer {
+            color: rgba(255, 248, 236, .48);
+            font-size: .77rem;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        .footer strong {
+            color: rgba(255, 248, 236, .82);
+        }
+
+        .footer-disclaimer {
+            max-width: 840px;
+            margin: 15px auto 0;
+            color: rgba(255, 248, 236, .34);
+            font-size: .68rem;
+            font-weight: 300;
+            line-height: 1.72;
+        }
+
+        .footer-copy {
+            margin-top: 13px;
+            color: rgba(255, 248, 236, .28);
+            font-size: .67rem;
+        }
+
+        /* =========================================================
+           Animations
+        ========================================================= */
+        @keyframes fadeDown {
+            from {
+                opacity: 0;
+                transform: translateY(-16px);
+            }
+
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        @keyframes riseUp {
+            from {
+                opacity: 0;
+                transform: translateY(26px) scale(.985);
+            }
+
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        @keyframes popIn {
+            from {
+                opacity: 0;
+                transform: scale(0);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* =========================================================
+           Responsive
+        ========================================================= */
+        @media (max-width: 700px) {
+            .page {
+                padding: 14px 12px 52px;
+            }
+
+            .brand-bar {
+                border-radius: 22px;
+                padding: 11px 12px;
+            }
+
+            .brand-mark {
+                width: 34px;
+                height: 34px;
+                min-width: 34px;
+            }
+
+            .brand-name {
+                font-size: 1.14rem;
+            }
+
+            .brand-program {
+                font-size: .49rem;
+            }
+
+            .brand-status {
+                padding: 7px 9px;
+                font-size: .54rem;
+            }
+
+            .hero-card {
+                border-radius: 26px;
+            }
+
+            .hero-title {
+                font-size: clamp(2.4rem, 13vw, 3.65rem);
+            }
+
+            .session-card {
+                grid-template-columns: 1fr;
+            }
+
+            .section-card,
+            .mentor-card {
+                border-radius: 23px;
+            }
+
+            .mentor-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .mentor-avatar {
+                width: 82px;
+                height: 82px;
+                min-width: 82px;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .brand-program {
+                display: none;
+            }
+
+            .brand-status {
+                font-size: .5rem;
+                letter-spacing: .06em;
+            }
+
+            .pillars {
+                grid-template-columns: 1fr;
+            }
+
+            .expect-item:hover,
+            .prep-step:hover,
+            .pillar:hover {
+                transform: none;
+            }
+        }
+
+        @media (max-width: 390px) {
+            .brand-name {
+                font-size: 1rem;
+            }
+
+            .brand-status {
+                padding: 7px;
+            }
+
+            .brand-status-dot {
+                width: 6px;
+                height: 6px;
+            }
+
+            .hero-title {
+                font-size: 2.25rem;
+            }
+
+            .success-ring {
+                width: 76px;
+                height: 76px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="orb orb-gold"></div>
+    <div class="orb orb-sage"></div>
+
+    <main class="page">
+
+        <!-- =========================================================
+             Brand Bar
+        ========================================================= -->
+        <header class="brand-bar glass-card">
+            <div class="brand-lockup">
+                <div class="brand-mark">✦</div>
+
+                <div>
+                    <div class="brand-name">
+                        Conscious Living <span>Meditation</span>
+                    </div>
+
+                    <div class="brand-program">
+                        Consciousness Coaching • Mindfulness • Meditation
+                    </div>
+                </div>
+            </div>
+
+            <div class="brand-status">
+                <span class="brand-status-dot"></span>
+                Call Confirmed
+            </div>
+        </header>
+
+        <!-- =========================================================
+             Hero Confirmation Card
+        ========================================================= -->
+        <section class="hero-card glass-card">
+
+            <div class="success-ring">
+                <svg viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 21.5L17.3 29.8L33 13.4" stroke="#171006" stroke-width="3.7" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </div>
+
+            <p class="greeting" id="attendeeName-pzc">
+                Hello there 🙏
+            </p>
+
+            <h1 class="hero-title">
+                You're Confirmed!
+                <br />
+                <em>Your Clarity Call Is Booked.</em>
+            </h1>
+
+            <p class="hero-copy">
+                You have taken a gentle first step toward a calmer mind, emotional balance and inner clarity.
+                Your free 1:1 clarity call with <strong class="hi">Preethima</strong> has been scheduled.
+            </p>
+
+            <div class="session-card">
+
+                <div class="session-heading">
+                    Your Session Details
+                </div>
+
+                <div class="session-row">
+                    <div class="session-icon">👤</div>
+
+                    <div>
+                        <div class="session-label">
+                            Attendee
+                        </div>
+
+                        <div class="session-value" id="attendeeName-pzc-card">
+                            Guest
+                        </div>
+                    </div>
+                </div>
+
+                <div class="session-row">
+                    <div class="session-icon">📅</div>
+
+                    <div>
+                        <div class="session-label">
+                            Date & Time
+                        </div>
+
+                        <div class="session-value" id="callDateTime-pzc">
+                            —
+                        </div>
+                    </div>
+                </div>
+
+                <div class="session-row">
+                    <div class="session-icon">⏱️</div>
+
+                    <div>
+                        <div class="session-label">
+                            Session
+                        </div>
+
+                        <div class="session-value" id="sessionDuration-pzc">
+                            30 Minutes · Free Clarity Call
+                        </div>
+                    </div>
+                </div>
+
+                <div class="session-row">
+                    <div class="session-icon">✉️</div>
+
+                    <div>
+                        <div class="session-label">
+                            Confirmation Sent To
+                        </div>
+
+                        <div class="session-value" id="confirmationEmail-pzc">
+                            —
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================================================
+             What To Expect
+        ========================================================= -->
+        <section class="section-card glass-card">
+
+            <div class="eyebrow">
+                On Your Call
+            </div>
+
+            <h2 class="section-title">
+                What to <em>Expect</em>
+            </h2>
+
+            <ul class="expect-list">
+
+                <li class="expect-item">
+                    <div class="expect-bullet">1</div>
+
+                    <div class="expect-text">
+                        <strong>Deep-Dive Clarity</strong>
+
+                        <span>
+                            Preethima will listen to what you are experiencing — overthinking, stress,
+                            emotional overwhelm, mental confusion or spiritual questions — in a safe space.
+                        </span>
+                    </div>
+                </li>
+
+                <li class="expect-item">
+                    <div class="expect-bullet">2</div>
+
+                    <div class="expect-text">
+                        <strong>Gentle Clarity & Awareness</strong>
+
+                        <span>
+                            You will begin identifying thought patterns, emotional triggers and the areas
+                            where you need more calm, boundaries and self-awareness.
+                        </span>
+                    </div>
+                </li>
+
+                <li class="expect-item">
+                    <div class="expect-bullet">3</div>
+
+                    <div class="expect-text">
+                        <strong>Answers to Your Questions</strong>
+
+                        <span>
+                            Ask anything about mindfulness coaching, meditation practices, emotional
+                            balance, stress management or grounded spiritual growth support.
+                        </span>
+                    </div>
+                </li>
+
+                <li class="expect-item">
+                    <div class="expect-bullet">4</div>
+
+                    <div class="expect-text">
+                        <strong>Clear Next Steps</strong>
+
+                        <span>
+                            If the support feels aligned, Preethima will explain the next step. Either way,
+                            you will leave the call with more clarity about your mind, emotions and direction.
+                        </span>
+                    </div>
+                </li>
+
+            </ul>
+
+        </section>
+
+        <!-- =========================================================
+             About The Program
+        ========================================================= -->
+        <section class="section-card glass-card">
+
+            <div class="eyebrow">
+                The Coaching Support
+            </div>
+
+            <h2 class="section-title">
+                Calm Your <em>Overthinking Mind</em>
+                <br />
+                and Build Emotional Balance
+            </h2>
+
+            <p class="program-copy">
+                A practical, emotionally aware coaching journey for working professionals, women 30+,
+                Tamil-speaking seekers and spiritual learners who want less mental noise, better stress
+                management, emotional stability and grounded inner clarity.
+            </p>
+
+            <div class="pillars">
+
+                <article class="pillar">
+                    <div class="pillar-icon">🧬</div>
+
+                    <h3 class="pillar-title">
+                        Mindfulness Coaching
+                    </h3>
+
+                    <p class="pillar-desc">
+                        Understand your thought patterns and build simple awareness practices for daily life.
+                    </p>
+                </article>
+
+                <article class="pillar">
+                    <div class="pillar-icon">🏠</div>
+
+                    <h3 class="pillar-title">
+                        Meditation Training
+                    </h3>
+
+                    <p class="pillar-desc">
+                        Learn guided meditation, breathing routines and calming practices you can follow consistently.
+                    </p>
+                </article>
+
+                <article class="pillar">
+                    <div class="pillar-icon">🎓</div>
+
+                    <h3 class="pillar-title">
+                        Emotional Balance Tools
+                    </h3>
+
+                    <p class="pillar-desc">
+                        Use emotional intelligence tools to respond with calm instead of reacting from overwhelm.
+                    </p>
+                </article>
+
+                <article class="pillar">
+                    <div class="pillar-icon">🤝</div>
+
+                    <h3 class="pillar-title">
+                        Grounded Spiritual Growth
+                    </h3>
+
+                    <p class="pillar-desc">
+                        Receive support for personal growth, spiritual questions and twin-flame related clarity in Tamil
+                        or English.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- =========================================================
+             Mentor Card
+        ========================================================= -->
+        <section class="mentor-card">
+
+            <div class="mentor-avatar">
+                P
+            </div>
+
+            <div>
+                <div class="mentor-eyebrow">
+                    Your Guide & Coach
+                </div>
+
+                <h2 class="mentor-name">
+                    Preethima
+                </h2>
+
+                <p class="mentor-bio">
+                    A Consciousness Coach, Certified Mental Health Counselor and Meditation Trainer who blends
+                    mindfulness, emotional intelligence, meditation and consciousness-based self-awareness in a
+                    simple, practical way. During your clarity call, Preethima will help you understand your
+                    current emotional blocks and the next step toward calm, clarity and inner balance.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- =========================================================
+             Before Your Call
+        ========================================================= -->
+        <section class="section-card glass-card">
+
+            <div class="eyebrow">
+                Before Your Call
+            </div>
+
+            <h2 class="section-title">
+                How to <em>Prepare</em>
+            </h2>
+
+            <div class="prep-steps">
+
+                <div class="prep-step">
+                    <div class="step-num">1</div>
+
+                    <div class="step-content">
+                        <strong>Check your email</strong>
+
+                        <span>
+                            A calendar invitation and meeting details have been sent to your registered email address.
+                        </span>
+                    </div>
+                </div>
+
+                <div class="prep-step">
+                    <div class="step-num">2</div>
+
+                    <div class="step-content">
+                        <strong>Choose a quiet space</strong>
+
+                        <span>
+                            Join from a comfortable place where you can speak without interruptions for 30 minutes.
+                        </span>
+                    </div>
+                </div>
+
+                <div class="prep-step">
+                    <div class="step-num">3</div>
+
+                    <div class="step-content">
+                        <strong>Reflect on what feels heavy</strong>
+
+                        <span>
+                            Think about what you want support with — overthinking, stress, emotions,
+                            relationships, spiritual confusion or personal growth.
+                        </span>
+                    </div>
+                </div>
+
+                <div class="prep-step">
+                    <div class="step-num">4</div>
+
+                    <div class="step-content">
+                        <strong>Write down your questions</strong>
+
+                        <span>
+                            Keep your questions ready so that you can use your clarity call effectively.
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================================================
+             Footer
+        ========================================================= -->
+        <div class="divider">
+            <span class="divider-icon">✦</span>
+        </div>
+
+        <footer class="footer">
+            <p>
+                This clarity call is being conducted by
+                <strong>Preethima</strong>
+                for Conscious Living Meditation.
+            </p>
+
+            <p class="footer-disclaimer">
+                Disclaimer: This guidance is for mindfulness, meditation, emotional wellness and self-awareness
+                support. It is not a substitute for medical, psychiatric or emergency mental health treatment.
+                If you are in crisis or need clinical care, please contact a qualified professional or emergency
+                service.
+            </p>
+
+            <p class="footer-copy">
+                © 2026 Preethima · All Rights Reserved
+            </p>
+        </footer>
+
+    </main>
+
+    <script>
+        /* =========================================================
+           Dynamic Booking Details From URL Parameters
+        ========================================================= */
+
+        function getUrlParameter(name) {
+            return new URLSearchParams(window.location.search).get(name);
+        }
+
+        function formatDateTime(isoString) {
+            const date = new Date(isoString);
+
+            if (Number.isNaN(date.getTime())) {
+                return 'Date & time not provided';
+            }
+
+            const formattedDate = new Intl.DateTimeFormat('en-IN', {
+                timeZone: 'Asia/Kolkata',
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: 'numeric',
+                minute: '2-digit',
+                hour12: true
+            }).format(date);
+
+            return formattedDate + ' IST';
+        }
+
+        (function initBookingDetails() {
+            const attendeeName = getUrlParameter('attendeeName') || '';
+            const email = getUrlParameter('email') || '';
+            const startTime = getUrlParameter('attendeeStartTime') || '';
+            const title = getUrlParameter('title') || 'Free Clarity Call';
+
+            document.getElementById('attendeeName-pzc').textContent =
+                attendeeName ? 'Hello, ' + attendeeName + ' 🙏' : 'Hello there 🙏';
+
+            document.getElementById('attendeeName-pzc-card').textContent =
+                attendeeName || 'Guest';
+
+            document.getElementById('callDateTime-pzc').textContent =
+                startTime ? formatDateTime(startTime) : 'Date & time not provided';
+
+            document.getElementById('sessionDuration-pzc').textContent =
+                '30 Minutes · ' + title;
+
+            document.getElementById('confirmationEmail-pzc').textContent =
+                email && email !== 'your@email.com' ? email : 'No email provided';
+        })();
+    </script>
+
+</body>
+
+</html>
